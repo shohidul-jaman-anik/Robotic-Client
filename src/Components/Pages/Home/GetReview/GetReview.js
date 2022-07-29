@@ -7,7 +7,7 @@ import Carousel from 'react-elastic-carousel';
 
 const GetReview = () => {
   //use react query
-  const { data: reviews, isLoading } = useQuery(('reviews'), () => fetch(`http://localhost:5000/review`)
+  const { data: reviews, isLoading } = useQuery(('reviews'), () => fetch(`https://robotic-manufacture.herokuapp.com/review`)
     .then(res => res.json()))
   if (isLoading) {
     return <Loading></Loading>

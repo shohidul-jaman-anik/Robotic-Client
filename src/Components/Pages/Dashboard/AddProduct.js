@@ -35,7 +35,7 @@ const AddProduct = () => {
 
                     }
                     //send to your database
-                    fetch('http://localhost:5000/addProduct', {
+                    fetch('https://robotic-manufacture.herokuapp.com/addProduct', {
                         method: "POST",
                         headers: {
                             'content-type': "application/json",

@@ -7,11 +7,11 @@ import CheckoutForm from './CheckoutForm';
 import { loadStripe } from '@stripe/stripe-js';
 
 
-const stripePromise = loadStripe('pk_test_51L0e23Ca3QHIfeD9jH9tTOIpdBREDgbEafTED1OLblZAHjycTdBoJpDiCMFPW0d9SMjGPbuj0JFCFFzM6T8zJc5N000zlfIap7');
+const stripePromise = loadStripe('pk_test_51L3fcoEWKrisGJtYob8a6cDmb8cQDJiHQja8FYNhPE5Q6xzS9z2pQsXrSBkS7VHmeDkwxOwXHV3LSypVWBiypVRL00Dv21O1PU');
 
 const Paymens = () => {
     const { id } = useParams();
-    const url = `http://localhost:5000/orderId/${id}`;
+    const url = `https://robotic-manufacture.herokuapp.com/orderId/${id}`;
     const { data: payments, isLoading } = useQuery(['payments', id], () => fetch(url, {
         method: "GET",
         headers: {

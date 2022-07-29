@@ -7,7 +7,7 @@ import ProductsRow from './ProductsRow';
 const MannageProduct = () => {
 
     //use react query
-    const { data: products, isLoading, refetch } = useQuery(('products'), () => fetch(`http://localhost:5000/product`)
+    const { data: products, isLoading, refetch } = useQuery(('products'), () => fetch(`https://robotic-manufacture.herokuapp.com/product`)
         .then(res => res.json()));
 
     if (isLoading) {

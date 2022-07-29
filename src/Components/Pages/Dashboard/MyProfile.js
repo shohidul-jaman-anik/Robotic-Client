@@ -12,7 +12,7 @@ const MyProfile = () => {
     const [userInfo, setUserInfo] = useState([]);
     const navigate = useNavigate();
     useEffect(() => {
-        fetch(`http://localhost:5000/profile/${user?.email}`, {
+        fetch(`https://robotic-manufacture.herokuapp.com/profile/${user?.email}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
             }
@@ -48,7 +48,7 @@ const MyProfile = () => {
         }
 
         console.log(user)
-        fetch('http://localhost:5000/updateuser', {
+        fetch('https://robotic-manufacture.herokuapp.com/updateuser', {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'

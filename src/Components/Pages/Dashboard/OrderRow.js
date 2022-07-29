@@ -17,7 +17,7 @@ const OrderRow = ({ orders }) => {
       confirmButtonText: 'Yes, delete it!'
     }).then((results) => {
       if (results.isConfirmed) {
-        fetch(`http://localhost:5000/removeOrder/${Id}`, {
+        fetch(`https://robotic-manufacture.herokuapp.com/removeOrder/${Id}`, {
           method: "Delete",
           headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`

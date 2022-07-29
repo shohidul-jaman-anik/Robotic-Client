@@ -31,7 +31,7 @@ const Review = () => {
 
                     }
                     //send to your database
-                    fetch('http://localhost:5000/review', {
+                    fetch('https://robotic-manufacture.herokuapp.com/review', {
                         method: "POST",
                         headers: {
                             'content-type': 'application/json'
@@ -104,7 +104,7 @@ const Review = () => {
 
                         user ? <input className=' common-button mb-3' type="submit" value="Add" /> :
 
-                        <input disabled className=' common-button mb-3' type="submit" value="Add" />
+                            <input disabled className=' common-button mb-3' type="submit" value="Add" />
                     }
 
                 </form>

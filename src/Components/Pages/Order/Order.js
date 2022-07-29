@@ -15,7 +15,7 @@ import './Order.css'
 const Order = () => {
     const { Id } = useParams();
     //use react query
-    const { data: product, isLoading, refetch } = useQuery(('product'), () => fetch(`http://localhost:5000/productid/${Id}`)
+    const { data: product, isLoading, refetch } = useQuery(('product'), () => fetch(`https://robotic-manufacture.herokuapp.com/productid/${Id}`)
         .then(res => res.json()));
     const [user] = useAuthState(auth);
     const [email, setEmail] = useState('');
@@ -67,7 +67,7 @@ const Order = () => {
             price
         }
         console.log(order)
-        fetch('http://localhost:5000/order', {
+        fetch('https://robotic-manufacture.herokuapp.com/order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

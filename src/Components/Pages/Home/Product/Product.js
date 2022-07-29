@@ -6,7 +6,7 @@ import './Product.css'
 
 const Product = () => {
     //use react query
-    const { data: products, isLoading } = useQuery(('products'), () => fetch(`http://localhost:5000/product`)
+    const { data: products, isLoading } = useQuery(('products'), () => fetch(`https://robotic-manufacture.herokuapp.com/product`)
         .then(res => res.json()))
     if (isLoading) {
         return <Loading></Loading>
