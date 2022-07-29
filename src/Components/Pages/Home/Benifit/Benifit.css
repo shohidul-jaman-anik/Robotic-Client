@@ -1,0 +1,25 @@
+.benifit-content h2{
+ font-weight: 700;
+font-size: 38px;
+color: #282828;
+text-transform: capitalize;
+margin-bottom: 30px;
+}
+.benifit-content p{
+    color: #4e4e4e;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+   margin-bottom: 25px;
+}
+.benifit-content h4{
+    font-family: "Roboto", sans-serif;
+    font-weight:600;
+    font-size: 18px;
+    color: #282828;
+    margin-bottom: 25px;
+}
+.benifit-icon{
+    font-size: 40px;
+    color: #FA5F0B;
+}

@@ -1,0 +1,70 @@
+.footer-top::before{
+position: absolute;
+content: '';
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+background-color: #060f1e;
+opacity: .92;
+z-index: -10;
+}
+ .icon{
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 18px;
+    background-color: #e8693d;
+    border-radius: 50%;
+    display: block;
+    cursor: pointer;
+    transition: 0.5s all ease;
+
+}
+ .icon:hover{
+    color: #e8693d;
+    background-color: #ffffff;
+}
+.address-icon{
+    color: #e8693d;
+    font-size: 20px
+}
+.address h3{
+    font-weight: 500;
+    font-size: 16px;
+    margin:0px;
+}
+.address p{
+    color: #cdcccc;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-left: 22px;
+}
+.title{
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+.pages li{
+    font-size: 16px;
+   color: #e1e2e4;
+    cursor: pointer;
+    transition: 0.5s all ease;
+}
+.pages li:hover{
+    color: #e8693d;
+    padding-left:10px;
+}
+.footer-bottom{
+    background-color: #121f34;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 15px;
+    color: #ffffff;
+    margin-bottom: 0;
+    }

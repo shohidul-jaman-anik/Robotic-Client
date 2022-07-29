@@ -1,0 +1,55 @@
+[
+    {
+      "picture": "https://i.ibb.co/vk29s04/51-Hcllfr6-DL-SX522.jpg",
+      "name":"Milageto Robotic Arm Accessory",
+      "minimumOrder":8,
+      "price":10,
+      "quantity":100,
+        "description":"DIY 6-dof Mechanics Servo Handle Robot Arm for Robotics LearningKits Servo finish the grabing or lisfting action front and back, up and down,and left and right Can be used to test the servo motor coding for robotic engineers Suitable for learning the controling of automatic robotic arm; guest space and students learning kits Also learn serial ports controlling servo and potentiometer controlling servo"
+    },
+    {
+
+        "picture": "https://i.ibb.co/dbQYQvp/TD-168-152-1-500x500.jpg",
+        "name":" Aluminum Nexus Mecanum Wheels",
+        "minimumOrder":15,
+        "price":15,
+        "quantity":200,
+        "description":"The 203mm mecanum wheel is a heavy duty wheel comprised of a series of rollers, mounted so that their axis of rotation is 45 to the axis of the main wheel. As the wheels rotate in sync, the vehicle moves forwards or backwards normally, but by spinning pairs of wheels in opposite directions, the rollers enable sideways movement. Put it all together and you can move laterally, diagonally, or spin in a circle. Along with 4 assembled wheels, twelve bolts and twelve nuts are included for bolting on to either the 6mm Nexus aluminum wheel hub or the 8mm Nexus aluminum wheel hub.."
+    },
+    {
+
+        "picture": "https://i.ibb.co/yRMT9Tq/F9-JLLU7-GK0-YUT4-A.png",
+        "name":"DollaTek Small DC Buck Voltage Converter",
+        "minimumOrder":10,
+        "price":8,
+        "quantity":150,
+        "description":"With power supply green LED indicator and the mini voltmeter which can be calibrated by adjusting potentiometer High power of 5A and low ripple; has heatsink and copper pillar; Over-heating/short-circuit protection allows safe usage Press the switch button to choose testing input/output voltage;LED light when testing input voltage LED light when testing output voltage"
+    },
+    {
+
+        "picture": "https://i.ibb.co/nQNjLRX/81-Y-n-ZVRRh-L-SL1500.jpg",
+        "name":"Robot Coupe 3115S Motor Assembly",
+        "minimumOrder":8,
+        "price":35,
+        "quantity":290,
+        "description":"Genuine OEM replacement part.Robot Coupe is the foodservice industry leader in the refinement of food processors Use genuine OEM parts for safety reliability and performance "
+    },
+    {
+
+        "picture": "https://i.ibb.co/q1WDQJ8/61g8-Eo-QG-LL-AC-UL320-SR320-320.jpg ",
+        "name":"SunFounder Standard Gripper Kit",
+        "minimumOrder":12,
+        "price":30,
+        "quantity":400,
+        "description":"A Rollpaw kit and PCA9685 16 Channel 12 Bit PWM Servo Driver included.Rollpaw is a simple solution for projects requiring small grippers and driven by two servos, it can be used with ease in your projects.PCA9685 16 Channel 12 Bit PWM Servo Driver PCA9685 16-Channel 12-Bit PWM Servo Driver can help a lot when there are insufficient PWM output pins for the MCU in your project."
+    },
+    {
+  
+        "picture": " https://i.ibb.co/nrj385G/H4c27e1f3ba5e4cf4b0990ae1f99596f5g.jpg",
+        "name":"Timing Gear Housing Original Citroen ",
+        "minimumOrder":15,
+        "price":25,
+        "quantity":270,
+        "description":"Vacuum Cleaner parts.Traveling wheel-right and left.Compaitble for Roborock S50 S51 S55.left traveling for Roborock S5 1PCS.right traveling for Roborock S5 1PCS.Left and Right: Left and right traveling wheel for Roborock S5 1 pair"
+    }
+  ]

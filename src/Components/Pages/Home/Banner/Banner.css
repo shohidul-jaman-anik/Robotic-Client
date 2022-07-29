@@ -1,0 +1,44 @@
+.banner-area::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.799572) 23%, rgba(148, 187, 233, 0) 100%);
+    opacity: .75;
+    z-index: -10;
+  }
+.banner-area h1{
+  font-size: 58px;
+  color: #ffffff;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+.banner-area p{
+  font-weight: 500;
+  font-size: 19px;
+  margin-bottom: 30px;
+}
+  .img{
+    position: relative;
+    top: 30px;
+    -webkit-animation: banner-ani 10s infinite linear;
+    animation: banner-ani 10s infinite linear;
+  }
+
+ @keyframes banner-ani{ 0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(-50px, 0);
+    transform: translate(-50px, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+      transform: translate(0px);
+    transform: translate(0, 0);
+  }
+}
+

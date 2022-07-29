@@ -1,0 +1,26 @@
+[
+    {
+        "Username": "Lucas",
+        "picture": "https://i.ibb.co/VJbwWKm/pexels-photo-2112728.webp",
+        "rating": "5",
+        "description": "Who really reads the copy on your product pages, anyway? There are so many other things to do on a website in terms of conversion rate optimization that a product description can’t really make an impact on sales, right? "
+    },
+    {
+        "Username": "Olivia",
+        "picture": "https://i.ibb.co/Y7sL8Yg/pexels-photo-1239288.jpg",
+        "rating": "5",
+        "description": "Who really reads the copy on your product pages, anyway? There are so many other things to do on a website in terms of conversion rate optimization that a product description can’t really make an impact on sales, right? "
+    },
+    {
+        "Username": "Charlotte",
+        "picture": "https://i.ibb.co/HTdz8VX/pexels-photo-1181686.jpg",
+        "rating": "5",
+        "description": "Who really reads the copy on your product pages, anyway? There are so many other things to do on a website in terms of conversion rate optimization that a product description can’t really make an impact on sales, right? "
+    },
+    {
+        "Username": "Benjamin",
+        "picture": "https://i.ibb.co/0MGtnfZ/pexels-photo-819530.jpg",
+        "rating": "5",
+        "description": "Who really reads the copy on your product pages, anyway? There are so many other things to do on a website in terms of conversion rate optimization that a product description can’t really make an impact on sales, right? "
+    }
+]

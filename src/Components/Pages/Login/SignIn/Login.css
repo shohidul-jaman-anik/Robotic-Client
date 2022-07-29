@@ -1,0 +1,26 @@
+.form-container{
+    border-radius: 20px;
+    border-top: 3.5px solid #FE8144;
+    border-bottom: 3.5px solid #FE8144;
+    border-left: 1.5px solid #FE8144;
+    border-right: 1.5px solid #FE8144;
+    padding-bottom: 10px;
+    box-shadow: 1px 10px 25px -3px black;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    width:50%;
+}
+
+.user-img img{
+    width:15%;
+    margin:0 auto;
+    display:block;
+    border: 2px solid black;
+    border-radius: 50%;
+
+}
+@media  only screen and (max-width: 576px) {
+    .form-container{
+        width:100%;
+    }
+}

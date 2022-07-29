@@ -1,0 +1,42 @@
+.book{
+  padding: 90px 0;
+}
+.book-content h3{
+    font-weight: 600;
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+.book-row{
+    background-color:#fa5f0b ;
+    background: linear-gradient(59deg, rgba(255, 255, 255, 0) 0 25%, #FA5F0B 25% 100%);
+}
+.book-content{
+    padding-left:250px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+  .book-content a {
+    display: inline-block;
+    font-weight: 500;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 15px 25px;
+    cursor: pointer;
+  }
+  .book-content a:hover {
+    color: #fa5f0b;
+    background-color: #ffffff;
+  }
+
+  @media screen and (max-width:990px) {
+    .book{
+      background-color: #fa5f0b;
+    }
+    .book-content{
+      text-align: center;
+      padding-left:0px;
+      padding-top: 30px;
+      padding-bottom: 0px;
+  }
+  }

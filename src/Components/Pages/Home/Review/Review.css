@@ -1,0 +1,70 @@
+.kdCslO {
+    display: none !important;
+ 
+}
+.eAyARa {
+    background-color: #FA5F0B !important;
+    color: #fefcfc !important;
+    box-shadow: 0 0 2px 0px #fc1e1e !important;
+   
+}
+.eWjCzc {
+    background-color: #FA5F0B !important;
+    color: #fefcfc !important;
+    box-shadow: 0 0 2px 0px #fc1e1e !important;
+}
+.jhmYzC {
+ 
+    box-shadow: 0 0 1px 2px #FA5F0B!important;
+    border-radius: 50%;
+    outline: none;
+}
+.review{
+    padding: 100px 0;
+    position: absolute;
+    background-color: black;
+    z-index: -10;
+}
+.review h3{
+    color: #fa5f0b;
+    font-weight: 500;
+    font-size: 17px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+.review h2{
+    font-weight: 600;
+    font-size: 38px;
+    text-transform: capitalize;
+    margin-bottom: 5%;
+}
+
+
+.style{
+    border: 1px dashed #36424d;
+    padding: 40px 65px 40px 30px;
+    margin-bottom: 30px;
+    background-color: #02111e82;
+    margin: 5px;
+}
+.style p{
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 0;
+}
+.review-style{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.rating p{
+    margin: 0;
+}
+.name{
+    color: #ffffff;
+    margin-bottom: 3px;
+    font-weight: 500;
+    font-size: 18px;
+}

@@ -1,0 +1,11 @@
+.logo-area{
+    background: #F6F6F6;
+    padding: 70px 0;
+}
+.logo-item img{
+    filter: grayscale(100%);
+    transition: 0.5s all ease;
+}
+.logo-item:hover img{
+    filter: grayscale(0%);
+}

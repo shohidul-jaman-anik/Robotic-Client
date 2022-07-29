@@ -1,0 +1,29 @@
+.social{
+    padding: 140px 0;
+}
+.social-content{
+    background-color: #02111e;
+    padding: 55px 40px 55px;
+    position: relative;
+    top: 60px;
+    margin-left: -70px;
+    margin-bottom: 0;
+}
+.social-content h2{
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+.social-content p{
+    color: #ffffff;
+    font-size: 25px;
+    text-transform: capitalize;font-weight: 600;
+    margin-bottom: 25px;
+  }
+  @media  only screen and (max-width:990px) {
+    .social-content{
+        margin-left:0;
+    }
+ 
+     }
