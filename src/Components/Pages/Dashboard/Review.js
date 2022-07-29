@@ -99,7 +99,14 @@ const Review = () => {
                             {errors.productDesciption?.type === 'required' && <span className="label-text-alt text-danger">{errors.productDesciption.message}</span>}
                         </label>
                     </div>
-                    <input className=' common-button mb-3' type="submit" value="Add" />
+
+                    {
+
+                        user ? <input className=' common-button mb-3' type="submit" value="Add" /> :
+
+                        <input disabled className=' common-button mb-3' type="submit" value="Add" />
+                    }
+
                 </form>
 
             </div>

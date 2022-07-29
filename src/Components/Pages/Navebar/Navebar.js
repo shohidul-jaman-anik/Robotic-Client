@@ -11,10 +11,13 @@ import logo2 from '../../image/navebar/logo-three.png';
 import { FaLinkedinIn,FaTwitter,FaFacebookF,FaPinterest, } from 'react-icons/fa';
 import './Navebar.css'
 import Loading from '../Loading/Loading';
+import useAdmin from '../../hooks/useAdmin';
 
 
 const Navebar = () => {
     const [user, loading,]=useAuthState(auth);
+    const [admin] = useAdmin(user)
+
     if(loading){
       return <Loading></Loading>
     }
@@ -70,10 +73,12 @@ const Navebar = () => {
             <Navbar.Collapse id="responsive-navbar-nav">
              <Nav className="mx-auto">
              <Nav.Link as={Link} to="/">Home</Nav.Link>
+             <Nav.Link as={Link} to="/order">My Order</Nav.Link>
+             <Nav.Link as={Link} to="/review">Add Review</Nav.Link>
                <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
-                {/* //jodi user thake */}
+                {/* //jodi admin thake */}
              {
-               user && <>
+               admin && <>
                <Nav.Link as={Link} to="/dashboard">DashBoard</Nav.Link>
                </>
              }
