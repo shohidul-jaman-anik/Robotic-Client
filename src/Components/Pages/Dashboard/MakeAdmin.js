@@ -5,7 +5,8 @@ import AdminRow from './AdminRow';
 
 const MakeAdmin = () => {
     //use react query
-    const { data: users, isLoading, refetch } = useQuery(['available'], () => fetch(`http://localhost:5000/user`, {
+    const { data: users, isLoading, refetch } = useQuery(['available'], () => fetch(`https://robotic-server.onrender.com/
+user`, {
         method: "GET",
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`

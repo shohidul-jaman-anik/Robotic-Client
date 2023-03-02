@@ -5,7 +5,8 @@ import AllOrderRow from './AllOrderRow';
 
 const AllOrder = () => {
     //use react query
-    const { data: orders, isLoading, refetch } = useQuery(('orders'), () => fetch(`http://localhost:5000/orders`)
+    const { data: orders, isLoading, refetch } = useQuery(('orders'), () => fetch(`https://robotic-server.onrender.com/
+orders`)
         .then(res => res.json()))
 
     if (isLoading) {

@@ -7,7 +7,8 @@ import Review from '../Review/Review';
 
 const GetReview = () => {
   //use react query
-  const { data: reviews, isLoading } = useQuery(('reviews'), () => fetch(`http://localhost:5000/review`)
+  const { data: reviews, isLoading } = useQuery(('reviews'), () => fetch(`https://robotic-server.onrender.com/
+review`)
     .then(res => res.json()))
   if (isLoading) {
     return <Loading></Loading>

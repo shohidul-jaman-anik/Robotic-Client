@@ -34,8 +34,9 @@ const AddProduct = () => {
                         description: data.productDesciption,
 
                     }
+
                     //send to your database
-                    fetch('http://localhost:5000/addProduct', {
+                    fetch('https://robotic-server.onrender.com/addProduct', {
                         method: "POST",
                         headers: {
                             'content-type': "application/json",

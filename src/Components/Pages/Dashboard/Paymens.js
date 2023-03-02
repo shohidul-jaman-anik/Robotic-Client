@@ -11,7 +11,8 @@ const stripePromise = loadStripe('pk_test_51L3fcoEWKrisGJtYob8a6cDmb8cQDJiHQja8F
 
 const Paymens = () => {
     const { id } = useParams();
-    const url = `http://localhost:5000/orderId/${id}`;
+    const url = `https://robotic-server.onrender.com/
+orderId/${id}`;
     const { data: payments, isLoading } = useQuery(['payments', id], () => fetch(url, {
         method: "GET",
         headers: {
