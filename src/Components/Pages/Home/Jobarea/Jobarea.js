@@ -17,7 +17,7 @@ const Jobarea = () => {
                </div>
                <div className='job-area-content'>
                <h2>Enhancing, Not Replacing, Human Jobs</h2>
-               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+               <p>Robots will soon be everywhere. How can we nurture them to be our friends and useful collaborators? Robots with good aesthetic design, rich personalities, and social cognitive intelligence can potentially connect deeply and meaningfully with humans..</p>
                <ul>
                    <li><FontAwesomeIcon icon={faCheck} /> Higher Revenue</li>
                    <li><FontAwesomeIcon icon={faCheck} /> Improved Monitoring</li>

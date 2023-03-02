@@ -1,18 +1,18 @@
+import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
-import auth from '../../firebase.init';
-import { signOut } from 'firebase/auth';
-import Loading from '../Loading/Loading';
-import { toast } from 'react-toastify';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import auth from '../../firebase.init';
+import Loading from '../Loading/Loading';
 
 const MyProfile = () => {
     const [user, loading] = useAuthState(auth);
     const [userInfo, setUserInfo] = useState([]);
     const navigate = useNavigate();
     useEffect(() => {
-        fetch(`https://robotic-manufacture.herokuapp.com/profile/${user?.email}`, {
+        fetch(`http://localhost:5000/profile/${user?.email}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
             }
@@ -44,11 +44,10 @@ const MyProfile = () => {
             location: data.location,
             phone: data.phone,
             linkdin: data.linkdin
-
         }
 
         console.log(user)
-        fetch('https://robotic-manufacture.herokuapp.com/updateuser', {
+        fetch('http://localhost:5000/updateuser', {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'

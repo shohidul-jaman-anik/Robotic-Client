@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import ReactImageMagnify from 'react-image-magnify';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
-import ReactImageMagnify from 'react-image-magnify';
-import './Order.css'
+import './Order.css';
 
 
 
 const Order = () => {
     const { Id } = useParams();
     //use react query
-    const { data: product, isLoading, refetch } = useQuery(('product'), () => fetch(`https://robotic-manufacture.herokuapp.com/productid/${Id}`)
+    const { data: product, isLoading, refetch } = useQuery(('product'), () => fetch(`http://localhost:5000/productid/${Id}`)
         .then(res => res.json()));
     const [user] = useAuthState(auth);
     const [email, setEmail] = useState('');
@@ -67,7 +67,7 @@ const Order = () => {
             price
         }
         console.log(order)
-        fetch('https://robotic-manufacture.herokuapp.com/order', {
+        fetch('http://localhost:5000/order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

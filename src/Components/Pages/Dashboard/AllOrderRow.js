@@ -1,9 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ImBin } from "react-icons/im";
-import { useQuery } from 'react-query';
-import { toast } from 'react-toastify';
 import Swal from 'sweetalert2';
-import Loading from '../Loading/Loading';
 
 const AllOrderRow = ({ order, refetch }) => {
   const { price, paid, _id, productName, quantiti } = order;
@@ -20,7 +17,7 @@ const AllOrderRow = ({ order, refetch }) => {
       confirmButtonText: 'Yes, delete it!'
     }).then((results) => {
       if (results.isConfirmed) {
-        fetch(`https://robotic-manufacture.herokuapp.com/removeOrder/${Id}`, {
+        fetch(`http://localhost:5000/removeOrder/${Id}`, {
           method: "Delete",
           headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -54,7 +51,7 @@ const AllOrderRow = ({ order, refetch }) => {
         </div>}
         {
           (price && paid) && <div>
-            <button className='btn btn-primary'>painding </button>
+            <button className='btn btn-primary'>paid</button>
           </div>}
       </td>
       <td>

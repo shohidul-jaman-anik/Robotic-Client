@@ -13,7 +13,7 @@ const CheckoutForm = ({ payments }) => {
   const { price, userEmail, userName, _id } = payments
 
   useEffect(() => {
-    fetch('https://robotic-manufacture.herokuapp.com/create-payment-intent', {
+    fetch('http://localhost:5000/create-payment-intent', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
@@ -76,7 +76,7 @@ const CheckoutForm = ({ payments }) => {
         order: _id,
         transactionID: paymentIntent.id,
       }
-      fetch(`https://robotic-manufacture.herokuapp.com/orderId/${_id}`, {
+      fetch(`http://localhost:5000/orderId/${_id}`, {
         method: "PATCH",
         headers: {
           'content-type': 'application/json',

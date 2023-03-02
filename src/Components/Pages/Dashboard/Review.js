@@ -1,5 +1,4 @@
 import React from 'react';
-import { Form } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
@@ -7,6 +6,7 @@ import auth from '../../firebase.init';
 
 const Review = () => {
     const [user] = useAuthState(auth);
+    console.log(user)
     const imgStorageKEY = 'd6529dc3e2b5077433b72e6ff3596019';
     //for from
     const { register, formState: { errors }, handleSubmit } = useForm();
@@ -31,7 +31,7 @@ const Review = () => {
 
                     }
                     //send to your database
-                    fetch('https://robotic-manufacture.herokuapp.com/review', {
+                    fetch('http://localhost:5000/review', {
                         method: "POST",
                         headers: {
                             'content-type': 'application/json'
@@ -48,34 +48,29 @@ const Review = () => {
 
     return (
         <div>
-            <div className='mx-auto px-3'>
+            <div className='mx-auto px-3 w-75 my-lg-5'>
                 <h2>Add Your Review</h2>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     {/* ----------------Name--------------- */}
                     <div className="">
                         <label for="inputName" className="form-label">Name</label>
-                        <input type="text" value={user?.displayName} readOnly className="form-control" id="inputName" placeholder="name"{...register("name", {
+                        <input type="text" value={user?.displayName} readOnly className="form-control" id="inputName" placeholder=""{...register("name", {
                         })} />
                     </div>
                     {/* ----------image fild-----------*/}
                     <div className="">
-                        <label for="inputName" className="form-label">Product Image</label>
-                        <input type="file" className="form-control" id="inputName" placeholder="Product Image"{...register("image", {
-                            required: {
-                                value: true,
-                                message: 'Please Give Picture file'
-                            },
-                        })} />
-                        <label className="label">
-                            {errors.image?.type === 'required' && <span className="label-text-alt text-danger">{errors.image.message}</span>}
-                        </label>
+                        <label for="inputName" className="form-label">User Image</label>
+
+                        <input type="text" className="form-control"
+                            value={user?.userImg}
+                            id="inputName" placeholder=""{...register("image")} />
                     </div>
 
 
                     {/* ----------------Rating--------------- */}
                     <div className="">
-                        <label for="inputName" className="form-label">Product Rating</label>
-                        <input type="number" className="form-control" id="inputName" placeholder="Quantity"{...register("rating", {
+                        <label for="inputName" className="form-label">Rating</label>
+                        <input type="number" className="form-control" id="inputName" placeholder=""{...register("rating", {
                             required: {
                                 value: true,
                                 message: 'Please give rating'
@@ -88,11 +83,11 @@ const Review = () => {
 
                     {/* ----------------Product Description-------------- */}
                     <div className="">
-                        <label for="floatingTextarea2">Product Desciption</label>
-                        <textarea className="form-control" placeholder="Leave a description here" id="floatingTextarea2" style={{ height: "100px" }}{...register("productDesciption", {
+                        <label for="floatingTextarea2">Inter Your Comment</label>
+                        <textarea className="form-control" placeholder="" id="floatingTextarea2" style={{ height: "100px" }}{...register("productDesciption", {
                             required: {
                                 value: true,
-                                message: 'Please give Product productDesciption'
+                                message: 'Please Enter your Comment'
                             },
                         })}></textarea>
                         <label className="label">

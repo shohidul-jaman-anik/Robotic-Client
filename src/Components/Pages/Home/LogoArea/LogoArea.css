@@ -3,6 +3,7 @@
     padding: 70px 0;
 }
 .logo-item img{
+    margin-left: 38px;
     filter: grayscale(100%);
     transition: 0.5s all ease;
 }

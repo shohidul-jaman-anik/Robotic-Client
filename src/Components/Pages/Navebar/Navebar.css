@@ -1,10 +1,15 @@
-.top-navebar{
-    background-color: black;
-    color:white;
-    padding: 10px 0;
+.subHeader {
+    font-size: small;
 }
-.nav-icon{
-   margin-top: 5px;
+
+.top-navebar {
+    background-color: black;
+    color: white;
+    padding-top: 10px;
+}
+
+.nav-icon {
+    /* margin-top: 5px; */
     width: 26px;
     height: 26px;
     text-align: center;
@@ -16,53 +21,62 @@
     cursor: pointer;
     transition: 0.5s all ease;
 }
-.nav-icon:hover{
+
+.nav-icon:hover {
     background-color: #FA5F0B;
 }
+
 /* main navebar */
 .bg {
     background: linear-gradient(145deg, white 0 25%, #FA5F0B 25% 100%);
 }
+
 .navbar-light .navbar-nav .nav-link {
-    color:white;
+    color: white;
     transition: 0.8s all ease;
 }
+
 .navbar-light .navbar-nav .nav-link:hover {
-   color:#000000;
+    color: #000000;
 }
-.NavDropdown{
-    color:white; 
-}
-.nav-link:focus, .nav-link:hover {
+
+.NavDropdown {
     color: white;
 }
-.login{
+
+.nav-link:focus,
+.nav-link:hover {
+    color: white;
+}
+
+.login {
     align-items: center;
 }
-.login a{
+
+.login a {
     text-decoration: none;
-    color:white;
+    color: white;
     margin-left: 25px;
-   
-   }
-   
-   @media  only screen and (max-width: 990px) {
+
+}
+
+@media only screen and (max-width: 990px) {
     .bg {
-        background:  #FA5F0B;
+        background: #FA5F0B;
     }
+}
+
+@media only screen and (max-width: 990px) {
+    .login a {
+        margin-left: 0px;
+        margin-right: 25px;
+        margin-bottom: 10px;
     }
-   @media  only screen and (max-width: 990px) {
-       .login a{
-           margin-left:0px;
-          margin-right: 25px;
-          margin-bottom: 10px;
-        
-        
-       }
-       .login{
-         display: flex;
-         flex-direction: column;
-         align-items: flex-start;
-        
-       }
-   }
+
+    .login {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+}

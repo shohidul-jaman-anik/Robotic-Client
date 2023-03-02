@@ -12,7 +12,7 @@ const Benifit = () => {
                     <div className='col-lg-6 col-12'>
                     <div className='benifit-content'>
                     <h2>Get Benefits of Using Latest Artificial Intelligence Technologies.</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                    <p>On the tree of robotic life, human-like robots play a particularly valuable role. It makes sense. Humans are brilliant, beautiful, compassionate, loveable, and capable of love, so why shouldn’t we aspire to make robots human-like in these ways? Don’t we want robots to have such marvelous capabilities as love, compassion, and genius?</p>
                     <div className='row align-items-center'>
                     <div className='col-12 col-md-6 d-flex align-items-center'>
                         <h4 className='pe-2'><FontAwesomeIcon className='benifit-icon' icon={faBullseye} /></h4>

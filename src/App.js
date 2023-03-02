@@ -22,6 +22,7 @@ import MyProfile from './Components/Pages/Dashboard/MyProfile';
 import NotFound from './Components/Pages/NotFound/NotFound';
 import Blog from './Components/Pages/Blog/Blog';
 import Welcome from './Components/Pages/Dashboard/Welcome';
+import Contact from './Components/Pages/Contact/Contact';
 
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
 
         <Route path="order" element={<MyOrder />}></Route>
         <Route path="review" element={<Review />}></Route>
+        <Route path="contact" element={<Contact />}></Route>
 
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />

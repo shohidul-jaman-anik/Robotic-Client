@@ -1,7 +1,7 @@
 import React from 'react';
+import { ImBin } from "react-icons/im";
 import { toast } from 'react-toastify';
 import Swal from 'sweetalert2';
-import { ImBin } from "react-icons/im";
 
 const ProductsRow = ({ product, refetch }) => {
     const { picture, name, price, _id } = product;
@@ -16,7 +16,7 @@ const ProductsRow = ({ product, refetch }) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://robotic-manufacture.herokuapp.com/addProduct/${Id}`, {
+                fetch(`http://localhost:5000/addProduct/${Id}`, {
                     method: "Delete",
                     headers: {
                         authorization: `Bearer ${localStorage.getItem('accessToken')}`

@@ -1,11 +1,11 @@
 import React from 'react';
-import { toast } from 'react-toastify';
 import { ImBin } from "react-icons/im";
+import { toast } from 'react-toastify';
 import Swal from 'sweetalert2';
 const AdminRow = ({ user, refetch }) => {
     const { email, role } = user;
     const makeAdmin = () => {
-        fetch(`https://robotic-manufacture.herokuapp.com/user/admin/${email}`, {
+        fetch(`http://localhost:5000/user/admin/${email}`, {
             method: 'PUT',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -36,7 +36,7 @@ const AdminRow = ({ user, refetch }) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((results) => {
             if (results.isConfirmed) {
-                fetch(`https://robotic-manufacture.herokuapp.com/removeuser/${email}`, {
+                fetch(`http://localhost:5000/removeuser/${email}`, {
                     method: "Delete",
                     headers: {
                         authorization: `Bearer ${localStorage.getItem('accessToken')}`

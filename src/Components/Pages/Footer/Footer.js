@@ -30,7 +30,7 @@ const Footer = () => {
                                 <h2 className='title'>Get In Touch</h2>
                                 <div className='address'>
                                     <h3><FaPhoneVolume className='address-icon' /> Phone</h3>
-                                    <p>0888555</p>
+                                    <p>018628###</p>
                                 </div>
                                 <div className='address'>
                                     <h3><FaEnvelopeOpenText className='address-icon' /> Email</h3>
@@ -38,7 +38,7 @@ const Footer = () => {
                                 </div>
                                 <div className='address'>
                                     <h3><FaMapMarkerAlt className='address-icon' /> Address</h3>
-                                    <p>3254-425 NW-2nd Ave, Miami USA</p>
+                                    <p>3254-425 NW-2nd Postoghola,Dhaka,Bangladesh</p>
                                 </div>
                             </div>
                         </div>
@@ -47,8 +47,8 @@ const Footer = () => {
                                 <h2 className='title'>Useful Links</h2>
                                 <ul className='list-unstyled pages'>
                                     <Link className='text-decoration-none' to="/"> <li ><FontAwesomeIcon icon={faAngleDoubleRight}></FontAwesomeIcon> Home</li></Link>
-                                    <Link className='text-decoration-none' to="/about"> <li><FontAwesomeIcon icon={faAngleDoubleRight}></FontAwesomeIcon> About</li></Link>
-                                    <Link className='text-decoration-none' to="/service"> <li ><FontAwesomeIcon icon={faAngleDoubleRight}></FontAwesomeIcon> Service</li></Link>
+                                    <Link className='text-decoration-none' to="/"> <li><FontAwesomeIcon icon={faAngleDoubleRight}></FontAwesomeIcon> About</li></Link>
+                                    <Link className='text-decoration-none' to="/"> <li ><FontAwesomeIcon icon={faAngleDoubleRight}></FontAwesomeIcon> Service</li></Link>
                                     <Link className='text-decoration-none' to="/blog"> <li ><FontAwesomeIcon icon={faAngleDoubleRight}></FontAwesomeIcon> Blog</li></Link>
                                 </ul>
                             </div>
@@ -64,7 +64,10 @@ const Footer = () => {
             </div>
             <div className='footer-bottom'>
                 <div className='container'>
-                    <p>Copyright &copy;2021 Robtic.Rifat Jahan for Robotic Manufacturers</p>
+                    <p>Copyright &copy;2021 Robtic.</p>
+                    <div className='text-white'>
+                    All Rights Reserve <span className='text-danger'>Shohidul Jaman Anik</span>
+                    </div>
                 </div>
             </div>
         </div>

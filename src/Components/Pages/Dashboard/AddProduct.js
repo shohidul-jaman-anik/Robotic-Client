@@ -8,7 +8,7 @@ const AddProduct = () => {
     const [user] = useAuthState(auth);
     const imgStorageKEY = 'd6529dc3e2b5077433b72e6ff3596019';
     //for from
-    const { register, formState: { errors }, handleSubmit } = useForm();
+    const { register, formState: { errors }, handleSubmit, reset } = useForm();
     // Submit your data into Redux store
     const onSubmit = async data => {
         const image = data.image[0];
@@ -35,7 +35,7 @@ const AddProduct = () => {
 
                     }
                     //send to your database
-                    fetch('https://robotic-manufacture.herokuapp.com/addProduct', {
+                    fetch('http://localhost:5000/addProduct', {
                         method: "POST",
                         headers: {
                             'content-type': "application/json",
@@ -46,6 +46,7 @@ const AddProduct = () => {
                         .then(res => res.json())
                         .then(output => {
                             if (output.insertedId) {
+                                reset()
                                 toast('Product added successfully');
                             } else {
                                 toast.error('Product added unsuccessfully')

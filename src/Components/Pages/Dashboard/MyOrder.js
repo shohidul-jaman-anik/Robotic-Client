@@ -1,8 +1,8 @@
+import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
-import { signOut } from 'firebase/auth';
 import OrderRow from './OrderRow';
 
 const MyOrder = () => {
@@ -11,7 +11,7 @@ const MyOrder = () => {
   const navigate = useNavigate();
   useEffect(() => {
     if (user) {
-      fetch(`https://robotic-manufacture.herokuapp.com/order?userEmail=${user.email}`, {
+      fetch(`http://localhost:5000/order?userEmail=${user.email}`, {
         method: "GET",
         headers: {
           'authorization': `Bearer ${localStorage.getItem('accessToken')}`

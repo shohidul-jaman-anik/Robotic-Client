@@ -1,17 +1,17 @@
 import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
 import React from 'react';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 import Loading from '../Loading/Loading';
 import CheckoutForm from './CheckoutForm';
-import { loadStripe } from '@stripe/stripe-js';
 
 
 const stripePromise = loadStripe('pk_test_51L3fcoEWKrisGJtYob8a6cDmb8cQDJiHQja8FYNhPE5Q6xzS9z2pQsXrSBkS7VHmeDkwxOwXHV3LSypVWBiypVRL00Dv21O1PU');
 
 const Paymens = () => {
     const { id } = useParams();
-    const url = `https://robotic-manufacture.herokuapp.com/orderId/${id}`;
+    const url = `http://localhost:5000/orderId/${id}`;
     const { data: payments, isLoading } = useQuery(['payments', id], () => fetch(url, {
         method: "GET",
         headers: {

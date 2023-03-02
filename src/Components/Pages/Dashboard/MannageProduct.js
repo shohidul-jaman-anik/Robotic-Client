@@ -1,13 +1,12 @@
 import React from 'react';
 import { useQuery } from 'react-query';
-import GetProduct from '../Home/Product/GetProduct/GetProduct';
 import Loading from '../Loading/Loading';
 import ProductsRow from './ProductsRow';
 
 const MannageProduct = () => {
 
     //use react query
-    const { data: products, isLoading, refetch } = useQuery(('products'), () => fetch(`https://robotic-manufacture.herokuapp.com/product`)
+    const { data: products, isLoading, refetch } = useQuery(('products'), () => fetch(`http://localhost:5000/product`)
         .then(res => res.json()));
 
     if (isLoading) {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const useTooken = (user) => {
     const [token, setToken] = useState('');
@@ -7,7 +7,7 @@ const useTooken = (user) => {
         console.log('Email', email)
         const currentUser = { email: email }
         if (email) {
-            fetch(`https://robotic-manufacture.herokuapp.com/user/${email}`, {
+            fetch(`http://localhost:5000/user/${email}`, {
                 method: "PUT",
                 headers: {
                     'content-type': 'application/json'

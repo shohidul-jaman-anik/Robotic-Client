@@ -1,7 +1,7 @@
 import React from 'react';
+import { ImBin } from "react-icons/im";
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
-import { ImBin } from "react-icons/im";
 
 const OrderRow = ({ orders }) => {
   const { price, paid, _id, productName, quantiti } = orders;
@@ -17,7 +17,7 @@ const OrderRow = ({ orders }) => {
       confirmButtonText: 'Yes, delete it!'
     }).then((results) => {
       if (results.isConfirmed) {
-        fetch(`https://robotic-manufacture.herokuapp.com/removeOrder/${Id}`, {
+        fetch(`http://localhost:5000/removeOrder/${Id}`, {
           method: "Delete",
           headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`

@@ -1,13 +1,13 @@
 import React from 'react';
+import Carousel from 'react-elastic-carousel';
 import { useQuery } from 'react-query';
+import testimonials from '../../../image/home-page-img/testimonial-bg.png';
 import Loading from '../../Loading/Loading';
 import Review from '../Review/Review';
-import testimonials from '../../../image/home-page-img/testimonial-bg.png';
-import Carousel from 'react-elastic-carousel';
 
 const GetReview = () => {
   //use react query
-  const { data: reviews, isLoading } = useQuery(('reviews'), () => fetch(`https://robotic-manufacture.herokuapp.com/review`)
+  const { data: reviews, isLoading } = useQuery(('reviews'), () => fetch(`http://localhost:5000/review`)
     .then(res => res.json()))
   if (isLoading) {
     return <Loading></Loading>
