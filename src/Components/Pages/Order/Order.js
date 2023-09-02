@@ -71,100 +71,100 @@ productid/${Id}`)
         fetch('https://robotic-server.onrender.com/order', {
             method: 'POST',
             headers: {
-            'content-type': 'application/json'
-        },
+                'content-type': 'application/json'
+            },
             body: JSON.stringify(order)
         })
             .then(res => res.json())
-    .then(data => {
-        if (data) {
-            toast(`Your order is complete`)
-        }
-        refetch()
-    })
+            .then(data => {
+                if (data) {
+                    toast(`Your order is complete`)
+                }
+                refetch()
+            })
     }
 
-if (isLoading) {
-    return <Loading></Loading>
-}
+    if (isLoading) {
+        return <Loading></Loading>
+    }
 
-return (
-    <div>
-        <div className='container'>
-            <div className='border border-secondary my-5 p-3 '>
-                <div className='productContainer'>
+    return (
+        <div>
+            <div className='container'>
+                <div className='border border-secondary my-5 p-3 '>
+                    <div className='productContainer'>
 
-                    <div className='productImg'>
-                        <ReactImageMagnify {...{
-                            smallImage: {
-                                alt: 'Robotic Products',
-                                isFluidWidth: true,
-                                src: product.picture
-                            },
-                            largeImage: {
-                                src: product.picture,
-                                width: 1000,
-                                height: 1400
-                            }
-                        }} />
-                    </div>
+                        <div className='productImg'>
+                            <ReactImageMagnify {...{
+                                smallImage: {
+                                    alt: 'Robotic Products',
+                                    isFluidWidth: true,
+                                    src: product.picture
+                                },
+                                largeImage: {
+                                    src: product.picture,
+                                    width: 1000,
+                                    height: 1400
+                                }
+                            }} />
+                        </div>
 
-                    <div className="">
-                        <div className='card-body'>
-                            <h3>{product.name}</h3>
+                        <div className="">
+                            <div className='card-body'>
+                                <h3>{product.name}</h3>
 
-                            <p className='pt-2 '>{product.description}</p>
+                                <p className='pt-2 '>{product.description}</p>
 
-                            <h6>Price : ${product.price}</h6>
-                            <h6>Quantity : {product.quantity}</h6>
-                            <h6 >MinimumOrder: {product.minimumOrder}</h6>
+                                <h6>Price : ${product.price}</h6>
+                                <h6>Quantity : {product.quantity}</h6>
+                                <h6 >MinimumOrder: {product.minimumOrder}</h6>
+                            </div>
                         </div>
                     </div>
-                </div>
 
 
-                {/*---------- From part---------- */}
+                    {/*---------- From part---------- */}
 
-                <div className='border p-2 w-50 mx-auto'>
-                    <Form onSubmit={loginHandle}>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Name</Form.Label>
-                            <Form.Control onChange={handleName} type="name" readOnly placeholder="Name" value={user?.displayName} required />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Email</Form.Label>
-                            <Form.Control type="Email" readOnly placeholder="Email" value={user?.email} required />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Label>Product Name</Form.Label>
-                            <Form.Control value={product.name} readOnly type="text" placeholder="product name" required />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Phone Number</Form.Label>
-                            <Form.Control onChange={handlPhone} type="number" placeholder="Phone Number" required />
-                        </Form.Group>
+                    <div className='border p-2 w-50 mx-auto'>
+                        <Form onSubmit={loginHandle}>
+                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                                <Form.Label>Name</Form.Label>
+                                <Form.Control onChange={handleName} type="name" readOnly placeholder="Name" value={user?.displayName} required />
+                            </Form.Group>
+                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                                <Form.Label>Email</Form.Label>
+                                <Form.Control type="Email" readOnly placeholder="Email" value={user?.email} required />
+                            </Form.Group>
+                            <Form.Group className="mb-3" controlId="formBasicPassword">
+                                <Form.Label>Product Name</Form.Label>
+                                <Form.Control value={product.name} readOnly type="text" placeholder="product name" required />
+                            </Form.Group>
+                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                                <Form.Label>Phone Number</Form.Label>
+                                <Form.Control onChange={handlPhone} type="number" placeholder="Phone Number" required />
+                            </Form.Group>
 
-                        <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Label>Address</Form.Label>
-                            <Form.Control onChange={handleAddress} type="text" placeholder="Address" required />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Label>Quantity</Form.Label>
-                            <Form.Control onChange={HandleQuantity} min={product.minimumOrder} max={product.quantity} type="number" placeholder="Quantity" required />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Label>Price</Form.Label>
-                            <Form.Control type="number" placeholder="price" readOnly value={price} required />
-                        </Form.Group>
-                        <Button onClick={handleQuantity} className='w-75 mx-auto d-block mb-2 common-button' type="submit">
-                            Add To Cart
-                        </Button>
-                    </Form>
+                            <Form.Group className="mb-3" controlId="formBasicPassword">
+                                <Form.Label>Address</Form.Label>
+                                <Form.Control onChange={handleAddress} type="text" placeholder="Address" required />
+                            </Form.Group>
+                            <Form.Group className="mb-3" controlId="formBasicPassword">
+                                <Form.Label>Quantity</Form.Label>
+                                <Form.Control onChange={HandleQuantity} min={product.minimumOrder} max={product.quantity} type="number" placeholder="Quantity" required />
+                            </Form.Group>
+                            <Form.Group className="mb-3" controlId="formBasicPassword">
+                                <Form.Label>Price</Form.Label>
+                                <Form.Control type="number" placeholder="price" readOnly value={price} required />
+                            </Form.Group>
+                            <Button onClick={handleQuantity} className='w-75 mx-auto d-block mb-2 common-button' type="submit">
+                                Add To Cart
+                            </Button>
+                        </Form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-);
+    );
 };
 
 export default Order;
